@@ -1,0 +1,34 @@
+.container {
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #0D0D0D;
+  color: #fff;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.container h1,p {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.container-btn {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 1em;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #bf9663;
+
+}
