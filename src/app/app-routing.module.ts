@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'topRated',
     loadChildren: () => import('./pages/top-rated/top-rated-routing.module').then( m => m.TopRatedPageRoutingModule)
+  },  {
+    path: 'recommendations',
+    loadChildren: () => import('./pages/recommendations/recommendations.module').then( m => m.RecommendationsPageModule)
   },
+
 
 ];
 

@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Import Pages
 
-import { HomePage }             from './home.page';
-import { MenuMainPage }         from '../pages/menu-main/menu-main.page';
-import { TopRatedPage }         from '../pages/top-rated/top-rated.page';
+import { HomePage }                 from './home.page';
+import { MenuMainPage }             from '../pages/menu-main/menu-main.page';
+import { TopRatedPage }             from '../pages/top-rated/top-rated.page';
+import { RecommendationsPage }      from './../pages/recommendations/recommendations.page';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'topRated',
     component: TopRatedPage
+  },
+  {
+    path: 'recommendations',
+    component: RecommendationsPage
   }
 ];
 
