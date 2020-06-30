@@ -1,0 +1,24 @@
+<ion-content class="rated-content">
+
+  <ion-header class="rated-header">
+    <ion-icon routerLink="/menu-main" name="arrow-back-outline" class="back-page"></ion-icon>
+    <h2>Melhores avaliações</h2>
+  </ion-header>
+
+  <ion-item *ngFor="let rated of topRates">
+    <ion-card color="light">
+      <ion-card-header color="light">
+        <ion-card-title> {{ rated.title }} </ion-card-title>
+        <ion-card-subtitle>{{ rated.original_title}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{ rated.overview }}
+      </ion-card-content>
+
+      <ion-card-content class="rated-popularity">
+        Popularidade: <b>{{ rated.popularity }}</b>
+      </ion-card-content>
+
+    </ion-card>
+  </ion-item>
