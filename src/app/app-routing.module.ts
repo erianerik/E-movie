@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'recommendations',
     loadChildren: () => import('./pages/recommendations/recommendations.module').then( m => m.RecommendationsPageModule)
   },
+  {
+    path: 'popular',
+    loadChildren: () => import('./pages/popular/popular.module').then( m => m.PopularPageModule)
+  },
 
 
 ];

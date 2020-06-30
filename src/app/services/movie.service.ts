@@ -4,8 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 // import Modules
-import { TopRated } from '../model/top-rated'
-import { Recommendations } from '../model/recommendations';
+import { Popular }                    from './../model/popular';
+import { TopRated }                   from '../model/top-rated'
+import { Recommendations }            from '../model/recommendations';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,10 @@ export class MovieService {
 
   getRecommendations(): Observable<Recommendations> {
     return this.http.get<Recommendations>(this.apiUrl + '/movie/2/recommendations?api_key=' + this.apiKey + '&language=pt-br&page=1')
+  }
+  
+  getPopular(): Observable<Popular> {
+    return this.http.get<Popular>(this.apiUrl + '/movie/popular?api_key=' + this.apiKey + '&language=pt-br&page=1')
   }
 
 }

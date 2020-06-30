@@ -1,0 +1,21 @@
+<ion-content class="popular-header">
+
+<ion-header class="header-text">
+  <ion-icon routerLink="/menu-main" name="arrow-back-outline" class="back-page"></ion-icon>
+  <h2>Main Populares</h2>
+</ion-header>
+
+<ion-card color="light" class="popular-card" *ngFor="let popular of popular">
+  <ion-item color="light">
+    <ion-label>
+      <h2> {{ popular.title }} </h2>
+    </ion-label>
+  </ion-item>
+      <ion-card-content>
+        <span>Popularidade:   <b> {{ popular.popularity }}</b>  <ion-icon name="eye-outline"></ion-icon> </span>
+        <p>{{ popular.overview }}</p>
+      </ion-card-content>
+
+  
+</ion-card>
+</ion-content>
