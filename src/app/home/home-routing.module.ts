@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePage } from './home.page';
-import {MenuMainPage} from '../pages/menu-main/menu-main.page';
+
+// Import Pages
+
+import { HomePage }             from './home.page';
+import { MenuMainPage }         from '../pages/menu-main/menu-main.page';
+import { TopRatedPage }         from '../pages/top-rated/top-rated.page';
+
 const routes: Routes = [
   {
     path: '',
@@ -10,6 +15,10 @@ const routes: Routes = [
   {
     path: 'menu-main',
     component: MenuMainPage,
+  },
+  {
+    path: 'topRated',
+    component: TopRatedPage
   }
 ];
 

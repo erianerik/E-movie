@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'menu-main',
     loadChildren: () => import('./pages/menu-main/menu-main.module').then( m => m.MenuMainPageModule)
   },
+  {
+    path: 'topRated',
+    loadChildren: () => import('./pages/top-rated/top-rated-routing.module').then( m => m.TopRatedPageRoutingModule)
+  },
+
 ];
 
 @NgModule({

@@ -7,7 +7,12 @@ const routes: Routes = [
   {
     path: '',
     component: MenuMainPage
+  },
+  {
+    path: 'top-rated',
+    loadChildren: () => import('../top-rated/top-rated.module').then( m => m.TopRatedPageModule)
   }
+
 ];
 
 @NgModule({

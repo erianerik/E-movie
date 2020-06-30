@@ -24,3 +24,20 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+* {
+    font-family: 'Varela Round', sans-serif;
+    --background: #0D0D0D;
+  }
+
+  .back-page {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 2em;
+  }
+
+  h2 {
+    clear: both;
+  }
