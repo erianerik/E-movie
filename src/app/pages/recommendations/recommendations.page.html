@@ -2,15 +2,18 @@
 <ion-content>
   <ion-header class="header-text">
     <ion-icon routerLink="/menu-main" name="arrow-back-outline" class="back-page"></ion-icon>
-    <h2>Melhores avaliações</h2>
+    <h2>Recomendações</h2>
   </ion-header>
 
   <ion-list class="recommendations-list">
-    <ion-item>
+    <ion-item *ngFor="let recommendations of recommendations">
+      <!-- <ion-avatar slot="start">
+        <img src="api.themoviedb.org/3{{ recommendations.poster_path }}">
+      </ion-avatar> -->
       <ion-label>
-        <h2>Han</h2>
-        <h3>Look, kid...</h3>
-        <p>I've got enough on my plate as it is, and I...</p>
+        <h2> {{ recommendations.title }} </h2>
+        <h2>Media de votos: <b>{{ recommendations.vote_average }} </b></h2>
+        <h3>Quantidade de votos: <b>{{ recommendations.vote_count }} </b></h3>
       </ion-label>
     </ion-item>
   </ion-list>

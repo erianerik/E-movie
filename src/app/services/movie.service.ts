@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 // import Modules
 import { TopRated } from '../model/top-rated'
+import { Recommendations } from '../model/recommendations';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,9 @@ export class MovieService {
   getTopRated(): Observable<TopRated> {
     return this.http.get<TopRated>(this.apiUrl + '/movie/top_rated?api_key=' + this.apiKey + '&language=pt-BR&page=1' ) ;
    }
+
+  getRecommendations(): Observable<Recommendations> {
+    return this.http.get<Recommendations>(this.apiUrl + '/movie/2/recommendations?api_key=' + this.apiKey + '&language=pt-br&page=1')
+  }
 
 }
